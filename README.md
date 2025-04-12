@@ -78,36 +78,53 @@ RETURN CALCULATE(DIVIDE(defaultcases, totalrecords), ALLEXCEPT('Loan_default', '
 ### Page 1: Loan Default Overview
 
 - **Visuals Used**:
-  - Pie chart (Default vs Non-Default)
-  - KPI cards (Avg Loan, Interest Rate, Default Rate)
-  - Bar chart (Loan Purpose breakdown)
-  - Line chart (Loan Issuance over time)
-
+  - **Bar Chart**: Loan Amount by Purpose (e.g., Home, Business, Education)
+  - **Bar Chart**: Average Income by Employment Type (Full-time, Self-employed, etc.)
+  - **Bar Chart**: Default Rate (%) by Employment Type
+  - **Area Chart**: Average Loan Amount by Age Group (Adults, Middle Age Adults, Seniors, Teens)
+  - **Line Chart**: Default Rate (%) by Year (2013–2018)
 ![Snap_Page1](https://github.com/user-attachments/assets/bd631002-24b5-459a-9bd5-dfcbab5f0a11)
+**Key Insights**:
+- Home and Business loans dominate the portfolio, each exceeding $6.5M in disbursement.
+- Full-time employees report the highest average income, with a slight decline across Self-employed and Part-time workers.
+- Unemployed applicants have the highest default rate (3.39%), followed by Part-time (3.01%), while Full-time workers are the least risky (2.36%).
+- Teen borrowers take the smallest average loan, while Middle Age and Senior Citizens receive nearly equal loan amounts.
+- Default rate peaked in 2016 at 11.75%, with slight fluctuation across years, suggesting potential external or seasonal factors affecting repayment.
+
+
 
 ---
 
-### Page 2: Demographics & Financial Profile
+### Page 2: Applicant Demographics & Financial Profile
 
 - **Visuals Used**:
-  - Ribbon chart (Education vs Loan Amount)
-  - Decomposition Tree (Income → Default Rate)
-  - Tree map (Marital Status by Loan Volume)
-  - Matrix visual (Employment Type vs Income and Default)
-
+  - **Line Chart**: Median Loan Amount by Credit Score Category (Low to High)
+  - **Donut Chart**: Avg Loan Amount (High Credit) segmented by Age Group and Marital Status
+  - **Line Chart**: Total Loans (Adults) by Credit Score Bins
+  - **Grouped Column Chart**: Loans for Middle Age Adults by Has Mortgage / Has Dependents
+  - **Line Chart**: Loans by Education Type (Bachelor's to PhD)
 ![Snap_Page2](https://github.com/user-attachments/assets/a94c456c-9e66-4bab-a716-d34bb21cbbbc)
+**Key Insights**:
+- Median loan amount drops steadily with improving credit scores—borrowers with "Low" credit scores access the largest median loans.
+- Divorced and Single adults hold relatively high loan values under the high credit category—possibly due to individual responsibility or lack of dual income.
+- Adults with “Low” and “Very Low” credit dominate loan volumes, revealing higher risk exposure.
+- Mortgage holders and borrowers with dependents show similar borrowing patterns among Middle Age Adults.
+- Bachelor’s degree holders receive the highest average loan amount; PhD holders are few in number with minimal loan values.
 
 ---
 
 ### Page 3: Financial Risk Metrics
-
 - **Visuals Used**:
-  - Line Chart (YoY Default Rate Change)
-  - Bar Chart (Loan Amount by Credit Score Bin)
-  - Card visuals (Median Loan by Credit Bin)
-  - KPI: YoY Loan Growth
-
+  - **Line Chart**: YoY Loan Amount Change by Year (2013–2018)
+  - **Line Chart**: YoY Default Loans Change by Year
+  - **Sankey Diagram**: YTD Loan Amount by Credit Score Bins and Marital Status
+  - **Decomposition Tree**: Total Loan Amount segmented by Income Bracket and Employment Type
 ![Snap_Page3](https://github.com/user-attachments/assets/f28d3659-69cf-4fb9-ac23-ded32fdd45fc)
+**Key Insights**:
+- Loan disbursements decreased in 2014 and 2016 but rebounded with a 7.3% growth in 2018.
+- YoY Default Loan Change shows a spike of +2.7% in 2015 and again +1.9% in 2018, indicating volatility in repayment behavior.
+- Sankey visual shows Married borrowers dominate across all credit bins in total YTD loan amount, despite higher defaults among Low credit segments.
+- High Income → Full-time pathway leads to the largest disbursed loan volume ($21.73bn total), confirming that income and employment stability drive loan size.
 
 ---
 
