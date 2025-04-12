@@ -6,9 +6,57 @@
 
 ## Problem Statement
 
-This dashboard helps financial institutions and credit analysts understand borrower behavior and identify risk of loan default. By analyzing a wide array of attributes—such as credit score, employment type, income, loan amount, and default history—the dashboard facilitates evidence-based decision-making. It also monitors year-over-year changes in default rates and loan disbursement trends.
+This Power BI project was developed to enable financial institutions, credit risk analysts, and loan officers to proactively monitor, analyze, and manage loan default risks using a rich dataset containing borrower-level information.
 
-The goal is to provide actionable insights to help reduce default rates by profiling borrowers, segmenting them by demographic and financial indicators, and uncovering risk patterns hidden in the data.
+The dataset includes key variables such as income, age, credit score, loan amount, loan purpose, employment type, marital status, default status, and more. Understanding how these variables interact helps uncover patterns that contribute to loan defaults and can support better lending decisions.
+
+To ensure enterprise-grade scalability, refresh automation, and efficient query performance, the solution was architected as follows:
+
+### 🔗 Use of Microsoft SQL Server
+
+We chose Microsoft SQL Server as the primary data source to simulate a real-world enterprise-grade backend where financial data is stored and updated continuously. SQL Server was ideal for:
+
+- Handling large volumes of structured loan data
+- Supporting relational integrity across borrower attributes
+- Offering high-performance integration with Power BI
+- Enabling stored procedures or advanced T-SQL if needed later
+
+The raw data (initially from Excel) was imported into SQL Server using SSMS. This mimics how many institutions manage production-grade datasets.
+
+---
+
+### 🔁 Use of Power BI Dataflow
+
+To decouple data transformation from reporting logic, we used Power BI Dataflows. This architectural decision improves performance, maintainability, and reusability across multiple reports.
+
+**Benefits of Dataflows in this project:**
+- Created a reusable layer of cleaned and transformed data
+- Enabled centralized data logic for all users across the workspace
+- Allowed use of scheduled refresh and incremental refresh at the data layer
+- Reduced load time and processing in the Power BI Desktop file (PBIX)
+
+The dataflow connected to SQL Server using DirectQuery/Import, and all transformations (e.g., typecasting, column profiling, removing nulls) were performed within Power Query Online. This keeps the PBIX report lightweight and scalable.
+
+---
+
+### 🧠 Business Use Case
+
+Financial institutions and microfinance organizations often issue thousands of loans monthly. Without an automated and intelligent analytics system, they risk:
+
+- Issuing high-value loans to low-credit or high-risk customers
+- Inadequately pricing interest rates due to poor segmentation
+- Failing to detect shifting trends in default behavior
+
+This dashboard solves those challenges by providing:
+
+- **Executive-Level Summaries**: KPIs for loan disbursement, interest rates, and default trends
+- **Segment-Level Profiling**: Insights by age group, credit bin, employment type, marital status
+- **Historical Trends**: YoY changes in default and issuance rates
+- **Predictive Indicators**: Visuals that expose where risk is accumulating (e.g., in low-score, self-employed applicants)
+
+---
+
+By combining SQL Server's stability, Dataflow’s ETL automation, and Power BI’s interactive visual analytics, this solution models a real-world, production-ready reporting pipeline for risk analysis and loan portfolio management.
 
 ---
 
