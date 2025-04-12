@@ -69,6 +69,7 @@ By combining SQL Server's stability, Dataflow’s ETL automation, and Power BI�
   SELECT * FROM dbo.Loan_default;
   ```
 - **Step 4**: Launched Power BI Service and created a **Dataflow** by connecting to the SQL Server database.
+  ![Image](https://github.com/user-attachments/assets/9fce0daa-deb3-4dc6-ba4f-4e95b18089df)
 - **Step 5**: In Power Query Editor, enabled **“Column profiling based on entire dataset”** for deeper analysis.
 - **Step 6**: Verified and fixed data types, especially converting the `Loan Date` column to `DateTime` to allow **incremental refresh** setup.
 - **Step 7**: Created a **calculated column** in Power BI to group applicants into different age groups:
