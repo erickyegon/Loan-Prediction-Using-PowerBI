@@ -68,6 +68,9 @@ By combining SQL Server's stability, Dataflow’s ETL automation, and Power BI�
   ```sql
   SELECT * FROM dbo.Loan_default;
   ```
+
+  ![Image](https://github.com/user-attachments/assets/2e129c8a-156b-45d0-8303-7c940cee8c6e)
+  
 - **Step 4**: Launched Power BI Service and created a **Dataflow** by connecting to the SQL Server database.
   ![Image](https://github.com/user-attachments/assets/9fce0daa-deb3-4dc6-ba4f-4e95b18089df)
 - **Step 5**: In Power Query Editor, enabled **“Column profiling based on entire dataset”** for deeper analysis.
